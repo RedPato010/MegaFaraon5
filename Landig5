@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma verificada con bono disponible</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: #111;
+    }
+    .checklist {
+      margin: 20px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .checklist li::before {
+      content: "✅";
+      margin-right: 10px;
+    }
+    .counter {
+      font-weight: bold;
+      color: green;
+      margin-bottom: 15px;
+    }
+    .btn-wsp {
+      display: block;
+      background: #25D366;
+      color: white;
+      text-align: center;
+      padding: 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.85rem;
+      margin-top: 25px;
+      color: #888;
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+    n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1904399837016157');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1904399837016157&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>Accedé al bono de bienvenida exclusivo</h1>
+    <p>Una nueva plataforma digital con beneficios activos por tiempo limitado. No se requiere tarjeta de crédito ni datos bancarios.</p>
+
+    <ul class="checklist">
+      <li>Verificación por WhatsApp ✅</li>
+      <li>Cuenta personalizada en minutos ⏱️</li>
+      <li>Bono del 30% disponible hoy 🎁</li>
+      <li>Retiro fácil y asistencia en línea 🧾</li>
+    </ul>
+
+    <p class="counter">Usuarios activos ahora: <span id="counter">132</span></p>
+
+    <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank">
+      Solicitar acceso desde WhatsApp
+    </a>
+
+    <div class="footer">Página verificada | Protección de identidad garantizada</div>
+  </div>
+
+  <script>
+    // Simula aumento aleatorio de usuarios activos
+    let base = 132;
+    setInterval(() => {
+      document.getElementById('counter').textContent = base + Math.floor(Math.random() * 4);
+    }, 3000);
+  </script>
+</body>
+</html>
