@@ -21,6 +21,8 @@
       border-radius: 12px;
       box-shadow: 0 0 10px #b30000; /* sombra roja */
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
     }
     .logo {
       max-width: 180px;
@@ -56,6 +58,9 @@
       color: #00ff00; /* verde para destacar */
       margin-bottom: 15px;
       font-size: 1.1rem;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 0.5s;
     }
     .btn-wsp {
       background: #ff0000;
@@ -66,15 +71,30 @@
       text-decoration: none;
       display: inline-block;
       margin-top: 20px;
-      transition: background 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1s;
     }
     .btn-wsp:hover {
       background: #cc0000;
+      transform: scale(1.05);
     }
     .footer {
       margin-top: 25px;
       font-size: 0.85rem;
       color: #ccc;
+    }
+    .disclaimer {
+      font-size: 0.75rem;
+      color: #777;
+      margin-top: 40px;
+      font-style: italic;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 
@@ -102,7 +122,7 @@
   <div class="container">
     <img class="logo" src="https://raw.githubusercontent.com/RedPato010/MegaFaraon5/main/Logo.png" alt="Logo Mega Faraon" />
     <h1>Accedé al bono de bienvenida exclusivo</h1>
-<p>Aprovechá ahora el bono especial y comenzá a jugar con la mejor plataforma digital. Fácil y confiable.</p>
+    <p>Aprovechá ahora el bono especial y comenzá a jugar con la mejor plataforma digital. Fácil y confiable.</p>
 
     <ul class="checklist">
       <li>Verificación por WhatsApp ✅</li>
@@ -113,9 +133,13 @@
 
     <p class="counter">Usuarios activos ahora: <span id="counter">132</span></p>
 
-   <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank" rel="noopener noreferrer">
-  Solicitá tu bono por WhatsApp
-</a>
+    <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank" rel="noopener noreferrer">
+      Solicitá tu bono por WhatsApp
+    </a>
+
+    <div class="disclaimer">
+      *Juego responsable. Prohibido menores de 18 años.
+    </div>
 
     <div class="footer">Página verificada | Protección de identidad garantizada</div>
   </div>
