@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Plataforma verificada con bono disponible</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -10,53 +10,71 @@
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #222;
+      background: #000; /* negro */
+      color: #eee; /* blanco suave */
     }
     .container {
       max-width: 500px;
-      margin: auto;
+      margin: 40px auto;
       padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      background: #111; /* negro más claro */
       border-radius: 12px;
-      margin-top: 40px;
+      box-shadow: 0 0 10px #b30000; /* sombra roja */
+      text-align: center;
+    }
+    .logo {
+      max-width: 180px;
+      margin-bottom: 20px;
     }
     h1 {
-      font-size: 1.5rem;
-      color: #111;
+      color: #ff0000; /* rojo fuerte */
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.4;
+      color: #ddd;
     }
     .checklist {
       margin: 20px 0;
       padding-left: 0;
       list-style: none;
+      text-align: left;
+      color: #eee;
+      font-size: 1rem;
     }
     .checklist li::before {
       content: "✅";
       margin-right: 10px;
+      color: #ff0000;
     }
     .counter {
       font-weight: bold;
-      color: green;
+      color: #00ff00; /* verde para destacar */
       margin-bottom: 15px;
+      font-size: 1.1rem;
     }
     .btn-wsp {
-      display: block;
-      background: #25D366;
+      background: #ff0000;
       color: white;
-      text-align: center;
       padding: 14px;
       border-radius: 8px;
+      font-weight: 700;
       text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: bold;
+      display: inline-block;
       margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .btn-wsp:hover {
+      background: #cc0000;
     }
     .footer {
-      text-align: center;
-      font-size: 0.85rem;
       margin-top: 25px;
-      color: #888;
+      font-size: 0.85rem;
+      color: #ccc;
     }
   </style>
 
@@ -82,6 +100,7 @@
 
 <body>
   <div class="container">
+    <img class="logo" src="https://raw.githubusercontent.com/RedPato010/MegaFaraon5/main/Logo.png" alt="Logo Mega Faraon" />
     <h1>Accedé al bono de bienvenida exclusivo</h1>
     <p>Una nueva plataforma digital con beneficios activos por tiempo limitado. No se requiere tarjeta de crédito ni datos bancarios.</p>
 
@@ -94,7 +113,7 @@
 
     <p class="counter">Usuarios activos ahora: <span id="counter">132</span></p>
 
-    <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank">
+    <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank" rel="noopener noreferrer">
       Solicitar acceso desde WhatsApp
     </a>
 
