@@ -2,128 +2,165 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MegaFaraón Bonos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plataforma verificada con bono disponible</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    img.logo {
-      max-width: 180px;
-      margin-bottom: 1.5rem;
-    }
-
-    h1 {
-      font-size: 2rem;
-      color: #ff0000;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      color: #dddddd;
-    }
-
-    ul {
-      list-style: none;
+      margin: 0;
       padding: 0;
-      margin: 1.5rem 0;
+      background: #000; /* negro */
+      color: #eee; /* blanco suave */
     }
-
-    ul li {
-      background: #1a1a1a;
-      border-left: 4px solid #ff0000;
-      padding: 0.75rem 1rem;
-      margin-bottom: 0.5rem;
-      text-align: left;
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #111; /* negro más claro */
+      border-radius: 12px;
+      box-shadow: 0 0 10px #b30000; /* sombra roja */
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
     }
-
-    .btn-wsp {
-      background-color: #25d366;
-      color: white;
-      font-weight: 600;
+    .logo {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #ff0000; /* rojo fuerte */
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
       font-size: 1rem;
-      padding: 0.9rem 1.5rem;
-      border: none;
-      border-radius: 0.5rem;
+      line-height: 1.4;
+      color: #ddd;
+    }
+    .checklist {
+      margin: 20px 0;
+      padding-left: 0;
+      list-style: none;
+      text-align: left;
+      color: #eee;
+      font-size: 1rem;
+    }
+    .checklist li::before {
+      content: "✅";
+      margin-right: 10px;
+      color: #ff0000;
+    }
+    .counter {
+      font-weight: bold;
+      color: #00ff00; /* verde para destacar */
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 0.5s;
+    }
+    .btn-wsp {
+      background: #ff0000;
+      color: white;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: 700;
       text-decoration: none;
       display: inline-block;
-      margin-top: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1s;
     }
-
     .btn-wsp:hover {
-      background-color: #1ebd5a;
+      background: #cc0000;
+      transform: scale(1.05);
     }
-
-    footer {
-      margin-top: 3rem;
+    .footer {
+      margin-top: 25px;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+    .disclaimer {
       font-size: 0.75rem;
-      color: #888;
+      color: #777;
+      margin-top: 40px;
+      font-style: italic;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 
-  <!-- Pixel de Meta -->
+  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+    n.callMethod.apply(n,arguments) : n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1904399837016157');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1904399837016157&ev=PageView&noscript=1"/></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1904399837016157&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body>
-  <img src="https://raw.githubusercontent.com/RedPato010/MegaFaraon5/main/Logo.png" alt="MegaFaraón Logo" class="logo" />
+  <div class="container">
+    <img class="logo" src="https://raw.githubusercontent.com/RedPato010/MegaFaraon5/main/Logo.png" alt="Logo Mega Faraon" />
+    <h1>Accedé al bono de bienvenida exclusivo</h1>
+    <p>Aprovechá ahora el bono especial y comenzá a jugar con la mejor plataforma digital. Fácil y confiable.</p>
 
-  <h1>🎁 Bonos activos por tiempo limitado</h1>
-  <p>Aprovechá ahora el bono especial y comenzá a jugar con la mejor plataforma digital. Fácil y confiable.</p>
+    <ul class="checklist">
+      <li>Verificación por WhatsApp ✅</li>
+      <li>Cuenta personalizada en minutos ⏱️</li>
+      <li>Bono del 30% disponible hoy 🎁</li>
+      <li>Retiro fácil y asistencia en línea 🧾</li>
+    </ul>
 
-  <ul>
-    <li>✅ Bono de bienvenida del 30%</li>
-    <li>💳 Sin tarjeta ni datos bancarios</li>
-    <li>⚡ Carga mínima: $2.000</li>
-    <li>💸 Retiro mínimo: $5.000</li>
-    <li>📲 Atención directa por WhatsApp</li>
-  </ul>
+    <p class="counter">Usuarios activos ahora: <span id="counter">132</span></p>
 
-  <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank" rel="noopener noreferrer">
-    Solicitá tu bono por WhatsApp
-  </a>
+    <a class="btn-wsp" href="https://wa.me/5493564225100?text=Hola%2C+quiero+un+usuario+para+acceder+al+bono+del+30%25+%F0%9F%8E%81" target="_blank" rel="noopener noreferrer">
+      Solicitá tu bono por WhatsApp
+    </a>
 
-  <footer>
-    © 2025 MegaFaraón. Todos los derechos reservados.
-  </footer>
+    <div class="disclaimer">
+      *Juego responsable. Prohibido menores de 18 años.
+    </div>
 
-  <!-- Evento personalizado: clic en botón WhatsApp -->
+    <div class="footer">Página verificada | Protección de identidad garantizada</div>
+  </div>
+
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const btnWsp = document.querySelector('.btn-wsp');
-      if (btnWsp) {
-        btnWsp.addEventListener('click', function () {
-          fbq('trackCustom', 'whatsapp_click');
-        });
-      }
-    });
+    
+    // Simula aumento aleatorio de usuarios activos
+    let base = 132;
+    setInterval(() => {
+      document.getElementById('counter').textContent = base + Math.floor(Math.random() * 4);
+    }, 3000);
   </script>
 </body>
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnWsp = document.querySelector('.btn-wsp');
+    if (btnWsp) {
+      btnWsp.addEventListener('click', function () {
+        fbq('trackCustom', 'whatsapp_click');
+      });
+    }
+  });
+</script>
